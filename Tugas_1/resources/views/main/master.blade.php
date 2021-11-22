@@ -41,16 +41,21 @@
   <!-- Main Sidebar Container -->
   @include('section.sidebar')
 
+  
+
    <!-- Content Wrapper. Contains page content -->
    <div class="content-wrapper">
+
     <!-- Content Header (Page header) -->
     @yield('content-head')
     <!-- /.content-header -->
-
-    <!-- Main content -->
-    @yield('content-main')
-    <!-- /.content -->
-
+    
+    <div class="container-fluid">
+      <!-- Main content -->
+      @yield('content-main')
+      <!-- /.content -->
+    </div>
+    
   <!-- /.content-wrapper -->
     @yield('content-footer')
 

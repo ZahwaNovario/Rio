@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,13 @@ Route::get('/', function () {
 Route::get('/master', function () {
     return view('main.master');
 });
+Route::get('/produk', [ProdukController::class, 'index'])
+->name('produk');
+
+Route::get('/produk/tambah', [ProdukController::class, 'create'])
+->name('tambahProduk');
+
+Route::get('/produk/delete/{id}', [ProdukController::class, 'destroy'])
+->name('hapusProduk');
+
+?>
