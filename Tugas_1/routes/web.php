@@ -27,7 +27,17 @@ Route::get('/produk', [ProdukController::class, 'index'])
 Route::get('/produk/tambah', [ProdukController::class, 'create'])
 ->name('tambahProduk');
 
+Route::post('/produk/store', [ProdukController::class, 'store'])
+->name('storeProduk');
+
 Route::get('/produk/delete/{id}', [ProdukController::class, 'destroy'])
 ->name('hapusProduk');
+
+Route::get('/produk/edit/{id}', [ProdukController::class, 'edit'])
+->name('editProduk');
+
+Route::post('/produk/update/{id}', [ProdukController::class, 'update'])
+->name('updateProduk');
+
 
 ?>

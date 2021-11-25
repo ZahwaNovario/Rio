@@ -18,6 +18,9 @@
                 <td>{{ $item->harga }}</td>
                 <td>{{ $item->jumlah }}</td>
                 <td>
+                    <a href="{{ route('editProduk', $item->id) }}" class="btn btn-light btn-sm btn-flat">
+                         Edit
+                    </a>
                     <a href="{{ route('hapusProduk', $item->id) }}" class="btn btn-danger btn-sm btn-flat">
                         Delete
                     </a>
